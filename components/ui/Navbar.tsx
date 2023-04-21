@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { Heart2 } from 'react-iconly';
 
 export const Navbar = () => {
-    const { theme } = useTheme();
+
+    const origin = (typeof window === 'undefined') ? '' : window.location.origin;
 
     return (
         <div style={{
@@ -16,26 +17,32 @@ export const Navbar = () => {
             padding: '0 20px',
         }}>
 
-            <Image
-                src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
-                alt='pokemon'
-                width={70}
-                height={70}
-            />
-           
-
-            <Text color='white' h2>P</Text>
-            <Link href='/'>
-                <Text color='white' h3>ókemon!</Text>
+            <Link style={{
+                display: 'flex',
+            }}
+                href='/'>
+                <Image
+                    style={{ marginLeft: 10 }}
+                    src={`${origin}/img/pokebola.png`}
+                    alt='Lista de Pókemons'
+                    width={50}
+                    height={50}
+                />
+                <Text color='white' h1 css={{ pl: 10 }}>P</Text>
+                <Text color='white' h2>ókemon!</Text>
             </Link>
 
             <Spacer css={{ flex: 1 }} />
 
-            <Link href='/favorites'>
-                <Text h3 color='white'>Favoritos</Text>
+            <Link style={{
+                display: 'flex',
+            }}
+                href='/favorites'>
+                <Text h3 css={{ marginRight: 10 }} color='white'>Favoritos</Text>
+                <Heart2 set="light" primaryColor='yellow' secondaryColor='white' stroke='regular' size='large' />
             </Link>
-            <Heart2 set="light" primaryColor='yellow' secondaryColor='white' stroke='regular' size='large'/>
-            
+
+
         </div>
     )
 }

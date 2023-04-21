@@ -104,7 +104,7 @@ const [isInFavorites, setIsInFavorites] = useState(localFavorites.existPokemonIn
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
-  const {data} = await pokeApi.get<PokemonListResponse>('/pokemon?limit=151');
+  const {data} = await pokeApi.get<PokemonListResponse>('/pokemon?limit=225');
 
   const pokemonName: string[] = data.results.map((pokemon) => pokemon.name);
 
