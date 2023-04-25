@@ -22,14 +22,14 @@ export const Navbar = () => {
             }}
                 href='/'>
                 <Image
-                    style={{ marginLeft: 10 }}
+                    style={{ marginLeft: 3 }}
                     src={`/img/pokebola.png`}
                     alt='Lista de Pókemons'
                     width={40}
                     height={40}
                 />
-                <Text color='white' h1 css={{ pl: 10 }}>P</Text>
-                <Text color='white' h2>ókemon!</Text>
+                <Text color='white' h2 css={{ pl: 10 }}>P</Text>
+                <Text color='white' h3>ókemon!</Text>
             </Link>
 
             <Spacer css={{ flex: 1 }} />
@@ -38,7 +38,7 @@ export const Navbar = () => {
                 display: 'flex',
             }}
                 href='/favorites'>
-                <Text h3 css={{ marginRight: 10 }} color='white'>Favoritos</Text>
+                <Text h4 css={{ marginRight: 5 }} color='white'>Favoritos</Text>
                 <Heart2 set="light" primaryColor='yellow' secondaryColor='white' stroke='regular' size='large' />
             </Link>
 
