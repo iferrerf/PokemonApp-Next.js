@@ -1,4 +1,4 @@
-import { Spacer, Text, useTheme } from '@nextui-org/react'
+import { Spacer, Text } from '@nextui-org/react'
 import Link from 'next/link'
 import Image from 'next/image';
 import { Heart2 } from 'react-iconly';
@@ -23,10 +23,10 @@ export const Navbar = () => {
                 href='/'>
                 <Image
                     style={{ marginLeft: 10 }}
-                    src={`${origin}/img/pokebola.png`}
+                    src={`/img/pokebola.png`}
                     alt='Lista de Pókemons'
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                 />
                 <Text color='white' h1 css={{ pl: 10 }}>P</Text>
                 <Text color='white' h2>ókemon!</Text>
